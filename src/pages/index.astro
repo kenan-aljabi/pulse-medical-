@@ -1,16 +1,73 @@
 ---
-
+import "../styles/global.css";
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+			rel="stylesheet"
+		/>
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="font-lexend">
+		<nav class="bg-white p-4">
+			<div
+				class="container mx-auto flex items-center justify-between edit-font"
+			>
+				<!-- Logo -->
+				<div class="flex-shrink-0">
+					<img src="/logo.png" alt="Site Logo" class="h-14 w-32" />
+				</div>
+
+				<!-- Navigation Links -->
+				<div
+					class="hidden md:flex flex-grow justify-center space-x-8 text-xl font-lexend"
+				>
+					<a href="/" class="text-custom-black hover:text-gray-400"
+						>Home</a
+					>
+					<a
+						href="/about"
+						class="text-custom-black hover:text-gray-400"
+						>About Us</a
+					>
+					<a
+						href="/services"
+						class="text-custom-black hover:text-gray-400"
+						>Products</a
+					>
+					<a
+						href="/portfolio"
+						class="text-custom-black hover:text-gray-400"
+						>Services</a
+					>
+					<a
+						href="/blog"
+						class="text-custom-black hover:text-gray-400"
+						>Hamilton</a
+					>
+					<a
+						href="/contact"
+						class="text-custom-black hover:text-gray-400">Clients</a
+					>
+					<a
+						href="/faq"
+						class="text-custom-black hover:text-gray-400"
+					>
+						Contact Us</a
+					>
+				</div>
+
+				<!-- Toggle Button -->
+				
+			</div>
+		</nav>
 	</body>
 </html>
