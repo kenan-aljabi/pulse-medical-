@@ -5,6 +5,8 @@ export default {
 		extend: {
 			colors: {
 				'custom-black': '#00000040',
+				'custom-bg': '#E0EBFF',
+
 			},
 			fontFamily: {
 				lexend: ['Lexend', 'sans-serif'],
