@@ -6,6 +6,8 @@ export default {
 			colors: {
 				'custom-black': '#00000040',
 				'custom-bg': '#E0EBFF',
+				'custom-text-color': '#6699FF',
+
 
 			},
 			fontFamily: {
