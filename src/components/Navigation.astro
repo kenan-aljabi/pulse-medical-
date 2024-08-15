@@ -11,56 +11,69 @@ const currentPath = Astro.url.pathname;
             <img src="/logo.png" alt="Site Logo" class="h-14 w-32" />
         </div>
 
-        <!-- Navigation Links -->
+        <!-- Navigation Links (Desktop) -->
         <div
             class="hidden md:flex flex-grow justify-center space-x-9 text-xl font-lexend"
         >
             <a
                 href="/"
                 class={`hover:text-black ${currentPath === "/" ? "text-black font-bold" : "text-custom-black"}`}
+                >Home</a
             >
-                Home
-            </a>
             <a
                 href="/about"
                 class={`hover:text-black ${currentPath === "/about" ? "text-black font-bold" : "text-custom-black"}`}
+                >About Us</a
             >
-                About Us
-            </a>
             <a
                 href="/products"
                 class={`hover:text-black ${currentPath === "/products" ? "text-black font-bold" : "text-custom-black"}`}
+                >Products</a
             >
-                Products
-            </a>
             <a
                 href="/services"
                 class={`hover:text-black ${currentPath === "/services" ? "text-black font-bold" : "text-custom-black"}`}
+                >Services</a
             >
-                Services
-            </a>
             <a
                 href="/hamilton"
                 class={`hover:text-black ${currentPath === "/hamilton" ? "text-black font-bold" : "text-custom-black"}`}
+                >Hamilton</a
             >
-                Hamilton
-            </a>
             <a
                 href="/clients"
                 class={`hover:text-black ${currentPath === "/clients" ? "text-black font-bold" : "text-custom-black"}`}
+                >Clients</a
             >
-                Clients
-            </a>
             <a
                 href="/contact"
                 class={`hover:text-black ${currentPath === "/contact" ? "text-black font-bold" : "text-custom-black"}`}
+                >Contact Us</a
             >
-                Contact Us
-            </a>
         </div>
 
-        <!-- Toggle Button -->
-        <div class="flex items-center space-x-2 me-7">
+        <!-- Toggle Button for Mobile -->
+        <button
+            id="menu-button"
+            class="md:hidden flex items-center p-2 text-black"
+        >
+            <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
+
+        <!-- Language Switch (Desktop) -->
+        <div class="hidden md:flex items-center space-x-2 me-7">
             <!-- English Label -->
             <span class="text-black font-bold">ENGLISH</span>
 
@@ -88,4 +101,88 @@ const currentPath = Astro.url.pathname;
             <span class="text-black font-bold">العربية</span>
         </div>
     </div>
+
+    <!-- Dropdown Menu (Mobile) -->
+    <div
+        id="dropdown-menu"
+        class="fixed inset-0 p-4 mt-16 md:hidden hidden flex flex-col items-center space-y-4 shadow-lg bg-white"
+    >
+        <a
+            href="/"
+            class={`block py-2 px-4 ${currentPath === "/" ? "text-black font-bold" : "text-custom-black"}`}
+            >Home</a
+        >
+        <a
+            href="/about"
+            class={`block py-2 px-4 ${currentPath === "/about" ? "text-black font-bold" : "text-custom-black"}`}
+            >About Us</a
+        >
+        <a
+            href="/products"
+            class={`block py-2 px-4 ${currentPath === "/products" ? "text-black font-bold" : "text-custom-black"}`}
+            >Products</a
+        >
+        <a
+            href="/services"
+            class={`block py-2 px-4 ${currentPath === "/services" ? "text-black font-bold" : "text-custom-black"}`}
+            >Services</a
+        >
+        <a
+            href="/hamilton"
+            class={`block py-2 px-4 ${currentPath === "/hamilton" ? "text-black font-bold" : "text-custom-black"}`}
+            >Hamilton</a
+        >
+        <a
+            href="/clients"
+            class={`block py-2 px-4 ${currentPath === "/clients" ? "text-black font-bold" : "text-custom-black"}`}
+            >Clients</a
+        >
+        <a
+            href="/contact"
+            class={`block py-2 px-4 ${currentPath === "/contact" ? "text-black font-bold" : "text-custom-black"}`}
+            >Contact Us</a
+        >
+    </div>
+
+    <!-- Language Switch (Mobile) -->
+    <div
+        class="fixed bottom-4 right-4 flex items-center space-x-2 z-40 md:hidden"
+    >
+        <!-- English Label -->
+        <span class="text-black font-bold text-sm">ENGLISH</span>
+
+        <!-- Toggle Switch -->
+        <label
+            for="toggle-example-mobile"
+            class="relative inline-flex items-center cursor-pointer"
+        >
+            <input
+                type="checkbox"
+                id="toggle-example-mobile"
+                class="sr-only peer"
+            />
+            <div class="w-8 h-5 bg-gray-200 rounded-full peer-checked:bg-black">
+            </div>
+            <div
+                class="dot absolute left-0.5 top-0.5 bg-black w-4 h-4 rounded-full transition-transform transform peer-checked:translate-x-full peer-checked:border-white border border-gray-300"
+            >
+            </div>
+        </label>
+
+        <!-- Arabic Label -->
+        <span class="text-black font-bold text-sm">العربية</span>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            const menuButton = document.getElementById("menu-button");
+            const dropdownMenu = document.getElementById("dropdown-menu");
+
+            if (menuButton && dropdownMenu) {
+                menuButton.addEventListener("click", () => {
+                    dropdownMenu.classList.toggle("hidden");
+                });
+            }
+        }, 0); // Delay execution to ensure elements are rendered
+    </script>
 </nav>
