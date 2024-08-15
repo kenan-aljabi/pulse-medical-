@@ -2,3 +2,57 @@
 
 ---
 
+<nav class="bg-white p-4">
+    <div
+        class="container mx-auto flex items-center justify-between font-normal"
+    >
+        <!-- Logo -->
+        <div class="flex-shrink-0 ms-4">
+            <img src="/logo.png" alt="Site Logo" class="h-14 w-32" />
+        </div>
+
+        <!-- Navigation Links -->
+        <div
+            class="hidden md:flex flex-grow justify-center space-x-9 text-xl font-lexend font"
+        >
+            <a href="/" class="text-custom-black hover:text-black">Home</a>
+            <a href="/" class="text-custom-black hover:text-black">About Us</a>
+            <a href="/" class="text-custom-black hover:text-black">Products</a>
+            <a href="/" class="text-custom-black hover:text-black">Services</a>
+            <a href="/" class="text-custom-black hover:text-black">Hamilton</a>
+            <a href="/" class="text-custom-black hover:text-black">Clients</a>
+            <a href="/" class="text-custom-black hover:text-black">
+                Contact Us</a
+            >
+        </div>
+
+        <!-- Toggle Button -->
+        <div class="flex items-center space-x-2">
+            <!-- English Label -->
+            <span class="text-black font-bold">ENGLISH</span>
+
+            <!-- Toggle Switch -->
+            <label
+                for="toggle-example"
+                class="relative inline-flex items-center cursor-pointer"
+            >
+                <input
+                    type="checkbox"
+                    id="toggle-example"
+                    class="sr-only peer"
+                />
+                <div
+                    class="w-11 h-6 bg-gray-200 rounded-full peer-checked:bg-black"
+                >
+                </div>
+                <div
+                    class="dot absolute left-1 top-0.5 bg-white w-5 h-5 rounded-full transition-transform transform peer-checked:translate-x-full peer-checked:border-white border border-gray-300"
+                >
+                </div>
+            </label>
+
+            <!-- Arabic Label -->
+            <span class="text-black font-bold">العربية</span>
+        </div>
+    </div>
+</nav>
