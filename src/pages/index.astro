@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Ellipse from "../components/Ellipse.astro";
+import Button from "../components/Button.astro";
 ---
 
 <BaseLayout>
@@ -18,24 +19,17 @@ import Ellipse from "../components/Ellipse.astro";
 					class="text-custom-text-color">high-quality</span
 				> medical and lab equipment with a world-class customer-oriented.
 			</h2>
-			<div class="mt-5 md:mt-7 leading-snug text-lg md:text-xl font-bold text-[#707A80]">
+			<div
+				class="mt-5 md:mt-7 leading-snug text-lg md:text-xl font-bold text-[#707A80]"
+			>
 				<p>
 					Delivering Cost-Effective Quality Products with a Commitment
 					to Customer Satisfaction and Lifelong Relationships
 				</p>
 			</div>
-			<div class="flex space-x-4 md:space-x-6 mt-6 md:mt-10">
-				<button
-					class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-md shadow-md hover:bg-blue-600 transition-colors"
-				>
-					Browse Our Services
-				</button>
-				<button
-					class="bg-transparent border border-blue-500 text-blue-500 font-semibold py-2 px-4 rounded-md shadow-md hover:bg-blue-100 transition-colors"
-				>
-					Browse Our Services
-				</button>
-			</div>
+
+			<!--Button Component -->
+			<Button />
 		</div>
 
 		<!-- Photo Section -->
@@ -56,17 +50,19 @@ import Ellipse from "../components/Ellipse.astro";
 
 	<!--Middle Body Part -->
 	<div class="flex justify-center items-center mt-40">
-		<h2 class="font-bold  text-4xl tracking-tight">Our Trusted Clients</h2>
+		<h2 class="font-bold text-4xl tracking-tight">Our Trusted Clients</h2>
 	</div>
 
 	<!--Logo Part -->
-	<div class="container columns-7 flex-col flex md:flex-row justify-center items-center gap-32 mt-20 md:text-3xl text-2xl font-bold">
-		<h1>Logo1</h1>
-		<h1>Logo2</h1>
-		<h1>Logo3</h1>
-		<h1>Logo4</h1>
-		<h1>Logo5</h1>
-		<h1>Logo6</h1>
-		<h1>Logo7</h1>
+	<div
+		class="container columns-7 flex-col flex md:flex-row justify-center items-center gap-32 mt-20 md:text-3xl text-2xl font-bold"
+	>
+		<p>Logo1</p>
+		<p>Logo2</p>
+		<p>Logo3</p>
+		<p>Logo4</p>
+		<p>Logo5</p>
+		<p>Logo6</p>
+		<p>Logo7</p>
 	</div>
 </BaseLayout>
