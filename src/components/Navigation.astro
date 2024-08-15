@@ -1,8 +1,8 @@
 ---
-
+const currentPath = Astro.url.pathname;
 ---
 
-<nav class="bg-white p-4 mb-14">
+<nav class="bg-white p-4 mb-14 sticky top-0 z-50">
     <div
         class="container mx-auto flex items-center justify-between font-normal"
     >
@@ -13,17 +13,50 @@
 
         <!-- Navigation Links -->
         <div
-            class="hidden md:flex flex-grow justify-center space-x-9 text-xl font-lexend font"
+            class="hidden md:flex flex-grow justify-center space-x-9 text-xl font-lexend"
         >
-            <a href="/" class="text-custom-black hover:text-black">Home</a>
-            <a href="/" class="text-custom-black hover:text-black">About Us</a>
-            <a href="/" class="text-custom-black hover:text-black">Products</a>
-            <a href="/" class="text-custom-black hover:text-black">Services</a>
-            <a href="/" class="text-custom-black hover:text-black">Hamilton</a>
-            <a href="/" class="text-custom-black hover:text-black">Clients</a>
-            <a href="/" class="text-custom-black hover:text-black">
-                Contact Us</a
+            <a
+                href="/"
+                class={`hover:text-black ${currentPath === "/" ? "text-black font-bold" : "text-custom-black"}`}
             >
+                Home
+            </a>
+            <a
+                href="/about"
+                class={`hover:text-black ${currentPath === "/about" ? "text-black font-bold" : "text-custom-black"}`}
+            >
+                About Us
+            </a>
+            <a
+                href="/products"
+                class={`hover:text-black ${currentPath === "/products" ? "text-black font-bold" : "text-custom-black"}`}
+            >
+                Products
+            </a>
+            <a
+                href="/services"
+                class={`hover:text-black ${currentPath === "/services" ? "text-black font-bold" : "text-custom-black"}`}
+            >
+                Services
+            </a>
+            <a
+                href="/hamilton"
+                class={`hover:text-black ${currentPath === "/hamilton" ? "text-black font-bold" : "text-custom-black"}`}
+            >
+                Hamilton
+            </a>
+            <a
+                href="/clients"
+                class={`hover:text-black ${currentPath === "/clients" ? "text-black font-bold" : "text-custom-black"}`}
+            >
+                Clients
+            </a>
+            <a
+                href="/contact"
+                class={`hover:text-black ${currentPath === "/contact" ? "text-black font-bold" : "text-custom-black"}`}
+            >
+                Contact Us
+            </a>
         </div>
 
         <!-- Toggle Button -->
