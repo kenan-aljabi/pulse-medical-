@@ -1,0 +1,27 @@
+---
+// TO Avoid Repeation, Making The Ellipse As Component, We Are Going To Use It Many Times.
+
+const {
+  width = "500px",
+  height = "520px",
+  top = "50%",
+  left = "50%",
+  opacity = "1",
+  background = "#6699FF",
+} = Astro.props;
+---
+
+<div
+  class="absolute bg-[#6699FF] rounded-full blur-lg"
+  style={`
+    width: ${width};
+    height: ${height};
+    top: ${top};
+    left: ${left};
+    opacity: ${opacity};
+    background: ${background}; 
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  `}
+>
+</div>

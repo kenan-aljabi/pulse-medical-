@@ -1,12 +1,13 @@
 ---
 import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Ellipse from "../components/Ellipse.astro";
 ---
 
 <BaseLayout>
 	<!-- Upper Part Of The Body -->
 	<div
-		class="container mx-auto flex flex-col md:flex-row items-center justify-between font-normal md:gap-10 lg:gap-16 xl:gap-24"
+		class="container mx-auto flex flex-col md:flex-row items-center justify-between font-normal md:gap-10 lg:gap-16 xl:gap-24 relative"
 	>
 		<!-- Text Section -->
 		<div class="ms-4 md:ms-12 w-full md:w-1/2">
@@ -17,7 +18,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 					class="text-custom-text-color">high-quality</span
 				> medical and lab equipment with a world-class customer-oriented.
 			</h2>
-			<div class="mt-5 md:mt-7 leading-snug text-lg md:text-xl">
+			<div class="mt-5 md:mt-7 leading-snug text-lg md:text-xl font-bold text-[#707A80]">
 				<p>
 					Delivering Cost-Effective Quality Products with a Commitment
 					to Customer Satisfaction and Lifelong Relationships
@@ -38,8 +39,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 		</div>
 
 		<!-- Photo Section -->
-		<div class="w-full md:w-1/2 mt-8 md:mt-0">
-			<div class="flex justify-center">
+		<div class="w-full md:w-1/2 mt-1 md:mt-0 relative">
+			<!-- Ellipse Behind the Photo -->
+			<Ellipse />
+
+			<!-- Photo -->
+			<div class="flex justify-center relative">
 				<img
 					src="/public/img/doctor.png"
 					alt="Doctor"
@@ -47,5 +52,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 				/>
 			</div>
 		</div>
+	</div>
+
+	<!--Middle Body Part -->
+	<div class="flex justify-center items-center mt-40">
+		<h2 class="font-bold  text-4xl tracking-tight">Our Trusted Clients</h2>
 	</div>
 </BaseLayout>
