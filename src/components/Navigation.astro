@@ -7,49 +7,60 @@ const currentPath = Astro.url.pathname;
         class="container mx-auto flex items-center justify-between font-normal"
     >
         <!-- Logo -->
-        <div class="flex-shrink-0 ms-7">
-            <img src="/logo.png" alt="Site Logo" class="h-14 w-32" />
+        <div class="flex-shrink-0 ms-4 lg:ms-7">
+            <img
+                src="/logo.png"
+                alt="Site Logo"
+                class="h-12 w-28 lg:h-14 lg:w-32"
+            />
         </div>
 
         <!-- Navigation Links (Desktop) -->
         <div
-            class="hidden md:flex flex-grow justify-center space-x-9 text-xl font-lexend"
+            class="hidden md:flex flex-grow justify-center md:space-x-4 lg:space-x-9 md:text-base lg:text-xl font-lexend"
         >
             <a
                 href="/"
                 class={`hover:text-black ${currentPath === "/" ? "text-black font-bold" : "text-custom-black"}`}
-                >Home</a
             >
+                Home
+            </a>
             <a
                 href="/about"
                 class={`hover:text-black ${currentPath === "/about" ? "text-black font-bold" : "text-custom-black"}`}
-                >About Us</a
             >
+                About Us
+            </a>
             <a
                 href="/products"
                 class={`hover:text-black ${currentPath === "/products" ? "text-black font-bold" : "text-custom-black"}`}
-                >Products</a
             >
+                Products
+            </a>
             <a
                 href="/services"
                 class={`hover:text-black ${currentPath === "/services" ? "text-black font-bold" : "text-custom-black"}`}
-                >Services</a
             >
+                Services
+            </a>
             <a
                 href="/hamilton"
                 class={`hover:text-black ${currentPath === "/hamilton" ? "text-black font-bold" : "text-custom-black"}`}
-                >Hamilton</a
             >
+                Hamilton
+            </a>
             <a
                 href="/clients"
                 class={`hover:text-black ${currentPath === "/clients" ? "text-black font-bold" : "text-custom-black"}`}
-                >Clients</a
             >
+                Clients
+            </a>
             <a
                 href="/contact"
                 class={`hover:text-black ${currentPath === "/contact" ? "text-black font-bold" : "text-custom-black"}`}
-                >Contact Us</a
             >
+                Contact Us
+            </a>
         </div>
 
         <!-- Toggle Button for Mobile -->
@@ -73,7 +84,7 @@ const currentPath = Astro.url.pathname;
         </button>
 
         <!-- Language Switch (Desktop) -->
-        <div class="hidden md:flex items-center space-x-2 me-7">
+        <div class="hidden md:flex items-center space-x-2 me-4 lg:me-7">
             <!-- English Label -->
             <span class="text-black font-bold">ENGLISH</span>
 
@@ -92,7 +103,7 @@ const currentPath = Astro.url.pathname;
                 >
                 </div>
                 <div
-                    class="dot absolute left-1 top-0.5 bg-black w-5 h-5 rounded-full transition-transform transform peer-checked:translate-x-full peer-checked:border-white border border-gray-300"
+                    class="absolute left-1 top-0.5 w-5 h-5 bg-black rounded-full transition-transform transform peer-checked:translate-x-full peer-checked:border-white border border-gray-300"
                 >
                 </div>
             </label>
@@ -105,43 +116,50 @@ const currentPath = Astro.url.pathname;
     <!-- Dropdown Menu (Mobile) -->
     <div
         id="dropdown-menu"
-        class="fixed inset-0 p-4 mt-16 md:hidden hidden flex-col items-center space-y-4 shadow-lg bg-white"
+        class="fixed inset-0 p-4 mt-16 lg:hidden flex flex-col items-center justify-center space-y-4 shadow-lg bg-white"
     >
         <a
             href="/"
-            class={`block py-2 px-4 ${currentPath === "/" ? "text-black font-bold" : "text-custom-black"}`}
-            >Home</a
+            class={`block py-2 px-4 text-lg ${currentPath === "/" ? "text-black font-bold" : "text-custom-black"}`}
         >
+            Home
+        </a>
         <a
             href="/about"
-            class={`block py-2 px-4 ${currentPath === "/about" ? "text-black font-bold" : "text-custom-black"}`}
-            >About Us</a
+            class={`block py-2 px-4 text-lg ${currentPath === "/about" ? "text-black font-bold" : "text-custom-black"}`}
         >
+            About Us
+        </a>
         <a
             href="/products"
-            class={`block py-2 px-4 ${currentPath === "/products" ? "text-black font-bold" : "text-custom-black"}`}
-            >Products</a
+            class={`block py-2 px-4 text-lg ${currentPath === "/products" ? "text-black font-bold" : "text-custom-black"}`}
         >
+            Products
+        </a>
         <a
             href="/services"
-            class={`block py-2 px-4 ${currentPath === "/services" ? "text-black font-bold" : "text-custom-black"}`}
-            >Services</a
+            class={`block py-2 px-4 text-lg ${currentPath === "/services" ? "text-black font-bold" : "text-custom-black"}`}
         >
+            Services
+        </a>
         <a
             href="/hamilton"
-            class={`block py-2 px-4 ${currentPath === "/hamilton" ? "text-black font-bold" : "text-custom-black"}`}
-            >Hamilton</a
+            class={`block py-2 px-4 text-lg ${currentPath === "/hamilton" ? "text-black font-bold" : "text-custom-black"}`}
         >
+            Hamilton
+        </a>
         <a
             href="/clients"
-            class={`block py-2 px-4 ${currentPath === "/clients" ? "text-black font-bold" : "text-custom-black"}`}
-            >Clients</a
+            class={`block py-2 px-4 text-lg ${currentPath === "/clients" ? "text-black font-bold" : "text-custom-black"}`}
         >
+            Clients
+        </a>
         <a
             href="/contact"
-            class={`block py-2 px-4 ${currentPath === "/contact" ? "text-black font-bold" : "text-custom-black"}`}
-            >Contact Us</a
+            class={`block py-2 px-4 text-lg ${currentPath === "/contact" ? "text-black font-bold" : "text-custom-black"}`}
         >
+            Contact Us
+        </a>
     </div>
 
     <!-- Language Switch (Mobile) -->
@@ -161,10 +179,10 @@ const currentPath = Astro.url.pathname;
                 id="toggle-example-mobile"
                 class="sr-only peer"
             />
-            <div class="w-8 h-5 bg-gray-200 rounded-full peer-checked:bg-black">
+            <div class="w-9 h-5 bg-gray-200 rounded-full peer-checked:bg-black">
             </div>
             <div
-                class="dot absolute left-0.5 top-0.5 bg-black w-4 h-4 rounded-full transition-transform transform peer-checked:translate-x-full peer-checked:border-white border border-gray-300"
+                class="absolute left-1 top-0.5 w-4 h-4 bg-black rounded-full transition-transform transform peer-checked:translate-x-full peer-checked:border-white border border-gray-300"
             >
             </div>
         </label>
@@ -183,6 +201,6 @@ const currentPath = Astro.url.pathname;
                     dropdownMenu.classList.toggle("hidden");
                 });
             }
-        }, 0); // Delay execution to ensure elements are rendered
+        }, 0);
     </script>
 </nav>
