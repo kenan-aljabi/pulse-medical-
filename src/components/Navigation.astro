@@ -1,6 +1,5 @@
 ---
 const currentPath = Astro.url.pathname;
-import '../scripts/menu'; 
 ---
 
 <nav class="bg-white p-4 mb-14 sticky top-0 z-50">
@@ -174,4 +173,16 @@ import '../scripts/menu';
         <span class="text-black font-bold text-sm">العربية</span>
     </div>
 
+    <script>
+        setTimeout(() => {
+            const menuButton = document.getElementById("menu-button");
+            const dropdownMenu = document.getElementById("dropdown-menu");
+
+            if (menuButton && dropdownMenu) {
+                menuButton.addEventListener("click", () => {
+                    dropdownMenu.classList.toggle("hidden");
+                });
+            }
+        }, 0); // Delay execution to ensure elements are rendered
+    </script>
 </nav>
