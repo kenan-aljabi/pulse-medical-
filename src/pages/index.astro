@@ -66,16 +66,105 @@ import Button from "../components/Button.astro";
 		<p>Logo7</p>
 	</div>
 
-	<Ellipse top="175%" left="8%" width="230px" height="280px" opacity="0.2" />
+	<Ellipse top="175%" left="8%" width="230px" height="280px" opacity="0.10" />
 
 	<!--Our Premium Services -->
-	<div class="container columns-2 flex">
-		<div class="font-bold  ms-9 w-1/2">
-			<h2 class="text-[34px]">Our Premium Services</h2>
+	<div
+		class="container flex flex-col md:flex-row justify-between px-4 md:px-11 service-section mt-20"
+	>
+		<div class="md:w-1/2">
+			<h2 class="font-bold text-2xl md:text-[34px] tracking-tighter">
+				Our Premium Services
+			</h2>
+
+			<div class="mt-10 ps-7">
+				<div class="mb-6">
+					<h3 class="text-xl md:text-[24px] font-bold mb-3">
+						Design
+					</h3>
+					<p>
+						Expertise-Driven Integrated Healthcare Solutions: From
+						Planning to Installation with Unwavering Commitment to
+						Quality.
+					</p>
+				</div>
+
+				<div class="mb-6">
+					<h3 class="text-xl md:text-[24px] font-bold mb-3">
+						supply
+					</h3>
+					<p>
+						Expertise-Driven Integrated Healthcare Solutions: From
+						Planning to Installation with Unwavering Commitment to
+						Quality.
+					</p>
+				</div>
+
+				<div class="mb-6">
+					<h3 class="text-xl md:text-[24px] font-bold mb-3">
+						installation
+					</h3>
+					<p>
+						Expertise-Driven Integrated Healthcare Solutions: From
+						Planning to Installation with Unwavering Commitment to
+						Quality.
+					</p>
+				</div>
+
+				<div class="mb-6">
+					<h3 class="text-xl md:text-[24px] font-bold mb-3">
+						quality control
+					</h3>
+					<p>
+						Expertise-Driven Integrated Healthcare Solutions: From
+						Planning to Installation with Unwavering Commitment to
+						Quality.
+					</p>
+				</div>
+
+				<div class="mb-6">
+					<h3 class="text-xl md:text-[24px] font-bold mb-3">
+						training
+					</h3>
+					<p>
+						Expertise-Driven Integrated Healthcare Solutions: From
+						Planning to Installation with Unwavering Commitment to
+						Quality.
+					</p>
+				</div>
+			</div>
 		</div>
 
-		<div class="flex justify-center">
-			<p class="bg-[#D9D9D9]">Image</p>
+		<!--Image Section-->
+		<div
+			class="bg-slate-300 w-full md:w-[590px] h-[300px] md:h-[590.95px] flex justify-center items-center mt-10 md:mt-4"
+		>
+			<h2 class="font-bold text-2xl md:text-[34px]">Image</h2>
 		</div>
 	</div>
+
+	<!--Our Featured Products Section -->
+	<div
+		class="conainer mt-36 ms-[66px] flex flex-row md:w-auto w-1/2 justify-between"
+	>
+		<div>
+			<h2 class="text-3xl md:text-[34px] font-bold tracking-tighter">
+				Our Featured Products
+			</h2>
+			<p
+				class="text-[24px] font-bold text-[#7C7B7B] mt-5 tracking-tighter"
+			>
+				Experience Unmatched Excellence and Exclusive Solutions
+			</p>
+		</div>
+
+		<div class="flex me-10">
+			<button
+				class="rounded-xl text-[20px] border-[3px] border-[#6699FF] text-[#6699FF] self-center justify-self-center px-2"
+				>View More</button
+			>
+		</div>
+	</div>
+
+	<!--Cards Section -->
 </BaseLayout>
