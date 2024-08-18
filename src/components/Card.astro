@@ -1,0 +1,46 @@
+---
+// Card.astro
+
+export interface CardProps {
+    imageUrl: string;
+    category: string;
+    title: string;
+}
+
+const { imageUrl, category, title } = Astro.props;
+---
+
+<div
+    class="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden relative"
+>
+    <!-- Card Image -->
+    <img class="w-[420px] h-[316px] object-cover" src={imageUrl} alt={title} />
+
+    <!-- Card Body -->
+    <div class="p-4">
+        <h4 class="text-[16px] text-[#707A80] font-normal mb-2">
+            {category}
+        </h4>
+        <h3 class="text-black text-[32px] leading-10 mb-16 font-bold">
+            {title}
+        </h3>
+        <button
+            class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 flex items-center justify-center absolute bottom-4 right-6"
+        >
+            <!-- Full Arrow Icon -->
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                class="h-5 w-5"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+        </button>
+    </div>
+</div>
