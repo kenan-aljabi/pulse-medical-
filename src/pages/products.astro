@@ -1,8 +1,54 @@
 ---
-import '../styles/global.css'; 
-import BaseLayout from '../layouts/BaseLayout.astro';
+import "../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
-    
+    <div class="container mt-24 px-36 flex justify-center items-center">
+        <!-- Header Part-->
+        <h2 class="text-[34px] font-bold tracking-tighter leading-10">
+            Our Featured Products
+        </h2>
+    </div>
+
+    <!--Nav Links -->
+    <nav class="mt-12">
+        <div class="container mx-auto flex justify-around items-center">
+            <div
+                class="flex space-x-16 font-bold text-[#9A9AB0] font-dm-sans items-center text-[20px] tracking-tighter"
+            >
+                <!-- Navbar Links -->
+                <a href="#" class="hover:text-[#48A5D0] active:text-[#48A5D0]"
+                    >AirSep</a
+                >
+                <a href="#" class="hover:text-[#48A5D0] active:text-[#48A5D0]"
+                    >Channal MED</a
+                >
+                <a href="#" class="hover:text-[#48A5D0] active:text-[#48A5D0]"
+                    >Diasys</a
+                >
+                <a href="#" class="hover:text-[#48A5D0] active:text-[#48A5D0]"
+                    >Manfils Biomedica</a
+                >
+                <a href="#" class="hover:text-[#48A5D0] active:text-[#48A5D0]"
+                    >Norav</a
+                >
+                <a href="#" class="hover:text-[#48A5D0] active:text-[#48A5D0]"
+                    >CSN-Industries</a
+                >
+                <a href="#" class="hover:text-[#48A5D0] active:text-[#48A5D0]"
+                    >Ultra-Dent</a
+                >
+                <div>
+                    <button class="flex items-center">
+                        <img
+                            src="/img/SearchIcon.png"
+                            alt="Search"
+                            class="w-[20px] h-[20px]"
+                        />
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
 </BaseLayout>
