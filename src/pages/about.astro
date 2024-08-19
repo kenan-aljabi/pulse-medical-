@@ -1,6 +1,8 @@
 ---
 import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import WhyUsCard from "../components/WhyUsCard.astro";
+import Ellipse from "../components/Ellipse.astro";
 ---
 
 <BaseLayout>
@@ -19,10 +21,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </div>
     </div>
 
+    <Ellipse top="140%" left="20%" width="450px" height="360px" opacity="0.2" />
+
     <!--Body Section-->
     <div class="container flex flex-col mt-20 ps-10">
         <div class="flex flex-col ps-52">
-            <h2 class="font-bold text-[34px] tracking-tighter mb-4 border-l-[7px] ps-5 rounded-sm border-[#6699FF]">
+            <h2
+                class="font-bold text-[34px] tracking-tighter mb-4 border-l-[7px] ps-5 rounded-sm border-[#6699FF]"
+            >
                 Welcome To Pulse for Medical Equipment (PME)
             </h2>
             <p class="text-[19px] font-normal tracking-tighter md:w-[80%]">
@@ -38,7 +44,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </div>
 
         <div class="flex flex-col ps-52 mt-24">
-            <h2 class="font-bold text-[34px] tracking-tighter mb-4 border-l-[7px] ps-5 rounded-sm border-[#6699FF]">
+            <h2
+                class="font-bold text-[34px] tracking-tighter mb-4 border-l-[7px] ps-5 rounded-sm border-[#6699FF]"
+            >
                 our mission
             </h2>
             <p class="text-[19px] font-normal tracking-tighter md:w-[80%]">
@@ -52,9 +60,21 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </div>
 
         <div class="flex flex-col ps-52 mt-24">
-            <h2 class="font-bold text-[34px] tracking-tighter mb-4 border-l-[7px] ps-5 rounded-sm border-[#6699FF]">
+            <h2
+                class="font-bold text-[34px] tracking-tighter mb-4 border-l-[7px] ps-5 rounded-sm border-[#6699FF] "
+            >
                 Why Us?
             </h2>
         </div>
+
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 mx-6"
+        >
+          <WhyUsCard/> 
+          <WhyUsCard/> 
+          <WhyUsCard/> 
+          <WhyUsCard/> 
+          <WhyUsCard/> 
+          <WhyUsCard/> 
     </div>
 </BaseLayout>
