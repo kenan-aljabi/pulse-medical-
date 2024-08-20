@@ -2,22 +2,20 @@
 const currentPath = Astro.url.pathname;
 ---
 
-<nav class="bg-white p-4 mb-0 z-50">
-    <div
-        class="container mx-auto flex items-center justify-between font-normal"
-    >
+<nav class="bg-white p-4 mb-0 z-50 relative">
+    <div class="container mx-auto flex items-center justify-between flex-wrap">
         <!-- Logo -->
         <div class="flex-shrink-0 ms-4 lg:ms-7">
             <img
                 src="/logo.png"
                 alt="Site Logo"
-                class="h-12 w-28 lg:h-14 lg:w-32"
+                class="h-10 w-24 lg:h-14 lg:w-32"
             />
         </div>
 
         <!-- Navigation Links (Desktop) -->
         <div
-            class="hidden md:flex flex-grow justify-center md:space-x-8 lg:space-x-7 md:text-base lg:text-xl font-lexend uppercase"
+            class="hidden md:flex flex-grow justify-center space-x-4 md:space-x-8 lg:space-x-12 text-xs md:text-sm lg:text-base font-lexend uppercase"
         >
             <a
                 href="/"
@@ -57,7 +55,10 @@ const currentPath = Astro.url.pathname;
         </div>
 
         <!-- Toggle Button for Mobile -->
-        <button id="menu-button" class="md:hidden flex items-center text-black">
+        <button
+            id="menu-button"
+            class="md:hidden flex items-center text-black relative z-50"
+        >
             <svg
                 class="w-6 h-6"
                 fill="none"
@@ -75,10 +76,9 @@ const currentPath = Astro.url.pathname;
 
         <!-- Language Switch (Desktop) -->
         <div class="hidden md:flex items-center space-x-2 me-4 lg:me-7">
-            <!-- English Label -->
-            <span class="text-black font-bold">ENGLISH</span>
-
-            <!-- Toggle Switch -->
+            <span class="text-black font-bold text-xs md:text-sm lg:text-base"
+                >ENGLISH</span
+            >
             <label
                 for="toggle-example"
                 class="relative inline-flex items-center cursor-pointer"
@@ -89,58 +89,58 @@ const currentPath = Astro.url.pathname;
                     class="sr-only peer"
                 />
                 <div
-                    class="w-11 h-6 bg-gray-200 rounded-full peer-checked:bg-black"
+                    class="w-10 h-5 bg-gray-200 rounded-full peer-checked:bg-black"
                 >
                 </div>
                 <div
-                    class="absolute left-1 top-0.5 w-5 h-5 bg-black rounded-full transition-transform transform peer-checked:translate-x-full peer-checked:border-white border border-gray-300"
+                    class="absolute left-0.5 top-0.5 w-4 h-4 bg-black rounded-full transition-transform transform peer-checked:translate-x-full peer-checked:border-white border border-gray-300"
                 >
                 </div>
             </label>
-
-            <!-- Arabic Label -->
-            <span class="text-black font-bold">العربية</span>
+            <span class="text-black font-bold text-xs md:text-sm lg:text-base"
+                >العربية</span
+            >
         </div>
     </div>
 
     <!-- Dropdown Menu (Mobile) -->
     <div
         id="dropdown-menu"
-        class="hidden fixed inset-0 p-4 mt-16 lg:hidden flex-col items-center justify-center space-y-4 shadow-lg bg-white"
+        class="fixed inset-0 p-4 mt-16 bg-white shadow-lg hidden flex-col items-center justify-center space-y-4 z-40"
     >
         <a
             href="/"
-            class={`block py-2 px-4 text-lg ${currentPath === "/" ? "text-black font-bold" : "text-custom-black"}`}
+            class={`block py-2 px-4 text-base ${currentPath === "/" ? "text-black font-bold" : "text-custom-black"}`}
             >Home</a
         >
         <a
             href="/about"
-            class={`block py-2 px-4 text-lg ${currentPath === "/about" ? "text-black font-bold" : "text-custom-black"}`}
+            class={`block py-2 px-4 text-base ${currentPath === "/about" ? "text-black font-bold" : "text-custom-black"}`}
             >About Us</a
         >
         <a
             href="/products"
-            class={`block py-2 px-4 text-lg ${currentPath === "/products" ? "text-black font-bold" : "text-custom-black"}`}
+            class={`block py-2 px-4 text-base ${currentPath === "/products" ? "text-black font-bold" : "text-custom-black"}`}
             >Products</a
         >
         <a
             href="/services"
-            class={`block py-2 px-4 text-lg ${currentPath === "/services" ? "text-black font-bold" : "text-custom-black"}`}
+            class={`block py-2 px-4 text-base ${currentPath === "/services" ? "text-black font-bold" : "text-custom-black"}`}
             >Services</a
         >
         <a
             href="/hamilton"
-            class={`block py-2 px-4 text-lg ${currentPath === "/hamilton" ? "text-black font-bold" : "text-custom-black"}`}
+            class={`block py-2 px-4 text-base ${currentPath === "/hamilton" ? "text-black font-bold" : "text-custom-black"}`}
             >Hamilton</a
         >
         <a
             href="/clients"
-            class={`block py-2 px-4 text-lg ${currentPath === "/clients" ? "text-black font-bold" : "text-custom-black"}`}
+            class={`block py-2 px-4 text-base ${currentPath === "/clients" ? "text-black font-bold" : "text-custom-black"}`}
             >Clients</a
         >
         <a
             href="/contact"
-            class={`block py-2 px-4 text-lg ${currentPath === "/contact" ? "text-black font-bold" : "text-custom-black"}`}
+            class={`block py-2 px-4 text-base ${currentPath === "/contact" ? "text-black font-bold" : "text-custom-black"}`}
             >Contact Us</a
         >
     </div>
@@ -149,10 +149,7 @@ const currentPath = Astro.url.pathname;
     <div
         class="fixed bottom-4 right-4 flex items-center space-x-2 z-40 md:hidden"
     >
-        <!-- English Label -->
-        <span class="text-black font-bold text-sm">ENGLISH</span>
-
-        <!-- Toggle Switch -->
+        <span class="text-black font-bold text-xs">ENGLISH</span>
         <label
             for="toggle-example-mobile"
             class="relative inline-flex items-center cursor-pointer"
@@ -165,13 +162,11 @@ const currentPath = Astro.url.pathname;
             <div class="w-9 h-5 bg-gray-200 rounded-full peer-checked:bg-black">
             </div>
             <div
-                class="absolute left-1 top-0.5 w-4 h-4 bg-black rounded-full transition-transform transform peer-checked:translate-x-full peer-checked:border-white border border-gray-300"
+                class="absolute left-0.5 top-0.5 w-4 h-4 bg-black rounded-full transition-transform transform peer-checked:translate-x-full peer-checked:border-white border border-gray-300"
             >
             </div>
         </label>
-
-        <!-- Arabic Label -->
-        <span class="text-black font-bold text-sm">العربية</span>
+        <span class="text-black font-bold text-xs">العربية</span>
     </div>
 
     <script>
