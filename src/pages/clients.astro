@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCards from "../components/ProjectCards.astro";
 ---
 
 <BaseLayout>
@@ -13,7 +14,23 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <h3
             class="font-bold text-[24px] leading-[30px] tracking-tighter text-[#7C7B7B] mt-4"
         >
-        Experience Unmatched Excellence and Exclusive Solutions
+            Experience Unmatched Excellence and Exclusive Solutions
         </h3>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="container min-w-full bg-[#E4EEF4] mt-16">
+        <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mx-[170px] py-10"
+        >
+            <ProjectCards />
+            <ProjectCards />
+            <ProjectCards />
+            <ProjectCards />
+            <ProjectCards />
+            <ProjectCards />
+            <ProjectCards />
+            <ProjectCards />
+        </div>
     </div>
 </BaseLayout>
