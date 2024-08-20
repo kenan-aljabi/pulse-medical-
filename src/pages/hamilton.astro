@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import HamiltonCards from "../components/HamiltonCards.astro";
 ---
 
 <BaseLayout>
@@ -17,6 +18,45 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </h3>
     </div>
 
+    <div
+        class="container flex flex-col mx-auto min-w-full ps-32 mt-20 bg-[#E4EEF4] py-10"
+    >
+        <h2
+            class="font-bold text-[34px] tracking-tighter mb-4 border-l-[7px] ps-5 rounded-sm border-[#6699FF]"
+        >
+            Description
+        </h2>
 
-    
+        <p class="font-normal leading-[22.5px] tracking-tighter pe-20">
+            HAMILTON MEDICAL was founded from a passion with the goal of
+            improving the lives of patients on respirators and the people who
+            care for them. Since 1983, our commitment to innovation has resulted
+            in creative solutions such as ultrafast valve technology, on-airway
+            flow sensing, lung function graphics monitoring, pulmonary parameter
+            monitoring, the world’s first closed-loop controlled ventilation
+            mode, Adaptive Support Ventilation (ASV), and the systematic
+            evolution of ASV: INTELLiVENT®-ASV.
+        </p>
+    </div>
+
+    <div
+        class="container flex flex-col mx-auto min-w-full ps-32 mt-20 bg-[#E4EEF4] py-10"
+    >
+        <h2
+            class="font-bold text-[34px] tracking-tighter border-l-[7px] ps-5 rounded-sm border-[#6699FF]"
+        >
+            Products
+        </h2>
+
+        <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-2 me-24"
+        >
+            <HamiltonCards />
+            <HamiltonCards />
+            <HamiltonCards />
+            <HamiltonCards />
+            <HamiltonCards />
+            <HamiltonCards />
+        </div>
+    </div>
 </BaseLayout>
