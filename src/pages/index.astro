@@ -9,12 +9,12 @@ import Card from "../components/Card.astro";
 <BaseLayout>
 	<!-- Upper Part Of The Body -->
 	<div
-		class="container mx-auto flex flex-col md:flex-row items-center justify-between font-normal md:gap-10 lg:gap-16 xl:gap-24 relative mt-8 px-4 sm:px-6 lg:px-8"
+		class="container mx-auto flex flex-col md:flex-row items-center justify-between font-normal md:gap-10 lg:gap-16 xl:gap-24 relative mt-8 px-4 lg:px-8"
 	>
 		<!-- Text Section -->
 		<div class="ms-4 md:ms-12 w-full md:w-1/2">
 			<h2
-				class="font-bold text-2xl md:text-3xl lg:text-4xl uppercase leading-snug"
+				class="font-bold md:text-3xl lg:text-4xl uppercase leading-snug sm:text-4xl"
 			>
 				offering <span class="text-custom-text-color">advanced</span>, <span
 					class="text-custom-text-color">high-quality</span
@@ -34,7 +34,7 @@ import Card from "../components/Card.astro";
 		</div>
 
 		<!-- Photo Section -->
-		<div class="w-full md:w-1/2 mt-1 md:mt-0 relative">
+		<div class="md:w-1/2 mt-1 md:mt-0 relative">
 			<!-- Ellipse Behind the Photo -->
 			<Ellipse />
 
@@ -43,7 +43,7 @@ import Card from "../components/Card.astro";
 				<img
 					src="/img/doctor.png"
 					alt="Doctor"
-					class="w-64 md:w-72 lg:w-80 xl:w-96 h-auto object-cover rounded-md"
+					class="w-48 md:w-72 lg:w-80 xl:w-96 h-auto object-cover rounded-md"
 				/>
 			</div>
 		</div>
