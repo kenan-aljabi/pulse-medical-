@@ -9,19 +9,19 @@ import Card from "../components/Card.astro";
 <BaseLayout>
 	<!-- Upper Part Of The Body -->
 	<div
-		class="container mx-auto flex flex-col md:flex-row items-center justify-between font-normal md:gap-10 lg:gap-16 xl:gap-24 relative mt-8 px-4 lg:px-8"
+		class="container flex flex-col md:flex-row items-center justify-around font-normal mx-auto relative mt-10 xl:ps-2 lg:ps-6"
 	>
 		<!-- Text Section -->
-		<div class="ms-4 md:ms-12 w-full md:w-1/2">
+		<div class="w-full md:w-1/2">
 			<h2
-				class="font-bold md:text-3xl lg:text-4xl uppercase leading-snug sm:text-4xl"
+				class="font-bold md:text-3xl lg:text-4xl uppercase leading-[50px] text-2xl w-[350px] md:w-[500px]"
 			>
 				offering <span class="text-custom-text-color">advanced</span>, <span
 					class="text-custom-text-color">high-quality</span
 				> medical and lab equipment with a world-class customer-oriented.
 			</h2>
 			<div
-				class="mt-5 md:mt-7 leading-snug text-lg md:text-xl font-bold text-[#707A80]"
+				class="mt-5 md:mt-7 mb-2 leading-snug text-2xl md:text-xl font-bold text-[#707A80] md:w-[580px] w-[350px]"
 			>
 				<p>
 					Delivering Cost-Effective Quality Products with a Commitment
@@ -51,7 +51,7 @@ import Card from "../components/Card.astro";
 
 	<!--Middle Body Part -->
 	<div
-		class="flex justify-center items-center mt-24 lg:mt-40 px-4 sm:px-6 lg:px-8"
+		class="flex justify-center items-center mt-24 md:mt-40 mx-auto"
 	>
 		<h2 class="font-bold text-3xl md:text-4xl tracking-tight">
 			Our Trusted Clients
@@ -60,7 +60,7 @@ import Card from "../components/Card.astro";
 
 	<!--Logo Part -->
 	<div
-		class="container columns-2 md:columns-4 lg:columns-7 flex-col flex md:flex-row justify-center items-center gap-x-8 md:gap-x-12 lg:gap-x-20 mt-12 md:mt-20 text-xl md:text-3xl font-bold mb-20 lg:mb-44"
+		class="container columns-2 md:columns-4 lg:columns-7 flex-col flex md:flex-row justify-center items-center gap-x-8 md:gap-x-12 xl:gap-x-[103px] mt-12 md:mt-20 text-xl md:text-3xl font-bold mb-20 lg:mb-44 mx-auto"
 	>
 		<p>Logo1</p>
 		<p>Logo2</p>
@@ -71,12 +71,17 @@ import Card from "../components/Card.astro";
 		<p>Logo7</p>
 	</div>
 
-	<Ellipse top="170%" left="8%" width="230px" height="280px" opacity="0.2" />
-
 	<!--Our Premium Services -->
 	<div
-		class="container flex flex-col md:flex-row justify-between px-4 md:px-11 service-section mt-20"
+		class="container mx-auto flex flex-col md:flex-row justify-center gap-x-16 service-section mt-20 relative"
 	>
+		<Ellipse
+			top="10%"
+			left="10%"
+			width="230px"
+			height="300px"
+			opacity="0.2"
+		/>
 		<div class="md:w-1/2">
 			<h2 class="font-bold text-2xl md:text-[34px] tracking-tighter">
 				Our Premium Services
@@ -150,11 +155,17 @@ import Card from "../components/Card.astro";
 		</div>
 	</div>
 
-	<Ellipse top="290%" left="17%" width="455px" height="335px" opacity="0.2" />
 	<!--Our Featured Products Section -->
 	<div
-		class="container mt-36 mx-4 sm:mx-16 flex flex-col md:flex-row justify-between mb-10"
+		class="container mt-36 flex flex-col md:flex-row justify-center mb-10  xl:gap-x-[450px] max-lg:flex-col relative mx-auto"
 	>
+		<Ellipse
+			top="%"
+			left="10%"
+			width="400px"
+			height="280px"
+			opacity="0.2"
+		/>
 		<div>
 			<h2 class="text-3xl md:text-[34px] font-bold tracking-tighter">
 				Our Featured Products
@@ -176,7 +187,7 @@ import Card from "../components/Card.astro";
 
 	<!--Cards -->
 	<div
-		class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mx-4 sm:mx-16"
+		class="container mx-auto flex flex-wrap gap-y-11"
 	>
 		<Card
 			imageUrl="https://via.placeholder.com/420x316"

@@ -2,20 +2,20 @@
 const currentPath = Astro.url.pathname;
 ---
 
-<nav class="bg-white p-4 mb-0 z-50 relative">
-    <div class="container mx-auto flex items-center justify-between flex-wrap">
+<nav class="py-3 z-50 flex justify-around min-w-full mx-auto">
+    <div class="container flex items-center justify-center mx-auto">
         <!-- Logo -->
-        <div class="flex-shrink-0 ms-4 lg:ms-7">
+        <div class="flex-shrink-0">
             <img
                 src="/logo.png"
                 alt="Site Logo"
-                class="h-10 w-24 lg:h-14 lg:w-32"
+                class="h-10 w-24 xl:h-14 xl:w-32 lg:h-14 lg:w-28"
             />
         </div>
 
         <!-- Navigation Links (Desktop) -->
         <div
-            class="hidden md:flex flex-grow justify-center space-x-4 md:space-x-8 lg:space-x-12 text-xs md:text-sm lg:text-base font-lexend uppercase"
+            class="hidden lg:mx-12 xl:mx-20 md:flex lg:space-x-7 space-x-4 xl:space-x-8 text-xs md:text-sm xl:text-[18px] lg:text-[13px] font-lexend uppercase leading-[18px] font-normal"
         >
             <a
                 href="/"
@@ -75,7 +75,7 @@ const currentPath = Astro.url.pathname;
         </button>
 
         <!-- Language Switch (Desktop) -->
-        <div class="hidden md:flex items-center space-x-2 me-4 lg:me-7">
+        <div class="hidden md:flex items-center space-x-1">
             <span class="text-black font-bold text-xs md:text-sm lg:text-base"
                 >ENGLISH</span
             >
@@ -146,29 +146,7 @@ const currentPath = Astro.url.pathname;
     </div>
 
     <!-- Language Switch (Mobile) -->
-    <div
-        class="fixed bottom-4 right-4 flex items-center space-x-2 z-40 md:hidden"
-    >
-        <span class="text-black font-bold text-xs">ENGLISH</span>
-        <label
-            for="toggle-example-mobile"
-            class="relative inline-flex items-center cursor-pointer"
-        >
-            <input
-                type="checkbox"
-                id="toggle-example-mobile"
-                class="sr-only peer"
-            />
-            <div class="w-9 h-5 bg-gray-200 rounded-full peer-checked:bg-black">
-            </div>
-            <div
-                class="absolute left-0.5 top-0.5 w-4 h-4 bg-black rounded-full transition-transform transform peer-checked:translate-x-full peer-checked:border-white border border-gray-300"
-            >
-            </div>
-        </label>
-        <span class="text-black font-bold text-xs">العربية</span>
-    </div>
-
+   
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const menuButton = document.getElementById("menu-button");
