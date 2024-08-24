@@ -50,9 +50,7 @@ import Card from "../components/Card.astro";
 	</div>
 
 	<!--Middle Body Part -->
-	<div
-		class="flex justify-center items-center mt-24 md:mt-40 mx-auto"
-	>
+	<div class="flex justify-center items-center mt-24 md:mt-40 mx-auto">
 		<h2 class="font-bold text-3xl md:text-4xl tracking-tight">
 			Our Trusted Clients
 		</h2>
@@ -71,25 +69,21 @@ import Card from "../components/Card.astro";
 		<p>Logo7</p>
 	</div>
 
-	<!--Our Premium Services -->
+	<!-- Our Premium Services -->
 	<div
 		class="container mx-auto flex flex-col md:flex-row justify-center gap-x-16 service-section mt-20 relative"
 	>
-		<Ellipse
-			top="10%"
-			left="10%"
-			width="230px"
-			height="300px"
-			opacity="0.2"
-		/>
+		<!-- Service Description Section -->
 		<div class="md:w-1/2">
 			<h2 class="font-bold text-2xl md:text-[34px] tracking-tighter">
 				Our Premium Services
 			</h2>
 
-			<div class="mt-10 ps-7">
+			<div class="mt-10 ps-3">
+				<!-- Design Service -->
 				<div
-					class="mb-6 border-l-[7px] ps-2 rounded-sm border-[#6699FF]"
+					class="service-item mb-6 border-l-0 ps-4 rounded-sm transition-all duration-300 hover:border-l-[7px] hover:ps-6 hover:border-[#6699FF]"
+					data-image="https://via.placeholder.com/420x316/6699FF"
 				>
 					<h3 class="text-xl md:text-[24px] font-bold mb-3">
 						Design
@@ -101,7 +95,11 @@ import Card from "../components/Card.astro";
 					</p>
 				</div>
 
-				<div class="mb-6">
+				<!-- Supply Service -->
+				<div
+					class="service-item mb-6 border-l-0 ps-4 rounded-sm transition-all duration-300 hover:border-l-[7px] hover:ps-6 hover:border-[#66FF99]"
+					data-image="https://via.placeholder.com/420x316/66FF99"
+				>
 					<h3 class="text-xl md:text-[24px] font-bold mb-3">
 						Supply
 					</h3>
@@ -112,7 +110,11 @@ import Card from "../components/Card.astro";
 					</p>
 				</div>
 
-				<div class="mb-6">
+				<!-- Installation Service -->
+				<div
+					class="service-item mb-6 border-l-0 ps-4 rounded-sm transition-all duration-300 hover:border-l-[7px] hover:ps-6 hover:border-[#FF9966]"
+					data-image="https://via.placeholder.com/420x316/FF9966"
+				>
 					<h3 class="text-xl md:text-[24px] font-bold mb-3">
 						Installation
 					</h3>
@@ -123,7 +125,11 @@ import Card from "../components/Card.astro";
 					</p>
 				</div>
 
-				<div class="mb-6">
+				<!-- Quality Control Service -->
+				<div
+					class="service-item mb-6 border-l-0 ps-4 rounded-sm transition-all duration-300 hover:border-l-[7px] hover:ps-6 hover:border-[#6699FF]"
+					data-image="https://via.placeholder.com/420x316/6699FF"
+				>
 					<h3 class="text-xl md:text-[24px] font-bold mb-3">
 						Quality Control
 					</h3>
@@ -134,7 +140,11 @@ import Card from "../components/Card.astro";
 					</p>
 				</div>
 
-				<div class="mb-6">
+				<!-- Training Service -->
+				<div
+					class="service-item mb-6 border-l-0 ps-4 rounded-sm transition-all duration-300 hover:border-l-[7px] hover:ps-6 hover:border-[#9966FF]"
+					data-image="https://via.placeholder.com/420x316/9966FF"
+				>
 					<h3 class="text-xl md:text-[24px] font-bold mb-3">
 						Training
 					</h3>
@@ -147,17 +157,20 @@ import Card from "../components/Card.astro";
 			</div>
 		</div>
 
-		<!--Image Section-->
-		<div
-			class="bg-slate-300 w-full md:w-[590px] h-[300px] md:h-[590.95px] flex justify-center items-center mt-10 md:mt-4"
-		>
-			<h2 class="font-bold text-2xl md:text-[34px]">Image</h2>
+		<!-- Image Section -->
+		<div class="md:w-1/2">
+			<img
+				id="service-image"
+				src="https://via.placeholder.com/420x316"
+				alt="Service Image"
+				class="w-full h-full object-cover "
+			/>
 		</div>
 	</div>
 
 	<!--Our Featured Products Section -->
 	<div
-		class="container mt-36 flex flex-col md:flex-row justify-center mb-10  xl:gap-x-[450px] max-lg:flex-col relative mx-auto"
+		class="container mt-36 flex flex-col md:flex-row justify-center mb-10 xl:gap-x-[450px] max-lg:flex-col relative mx-auto"
 	>
 		<Ellipse
 			top="%"
@@ -186,9 +199,7 @@ import Card from "../components/Card.astro";
 	</div>
 
 	<!--Cards -->
-	<div
-		class="container mx-auto flex flex-wrap gap-y-11"
-	>
+	<div class="container mx-auto flex flex-wrap gap-y-11">
 		<Card
 			imageUrl="https://via.placeholder.com/420x316"
 			category="Product Category"
@@ -220,4 +231,27 @@ import Card from "../components/Card.astro";
 			title="775l-36 Wheel Chair"
 		/>
 	</div>
+
+	<script>
+		// Select the service image element and cast it to HTMLImageElement
+		const serviceImage = document.getElementById(
+			"service-image",
+		) as HTMLImageElement | null;
+
+		// Check if the element exists before proceeding
+		if (serviceImage) {
+			// Add event listeners to each service item
+			document.querySelectorAll(".service-item").forEach((item) => {
+				item.addEventListener(
+					"mouseover",
+					function (this: HTMLElement) {
+						const imageUrl = this.getAttribute("data-image");
+
+						// Update the image source if the serviceImage element is not null
+						serviceImage.src = imageUrl || ""; // Provide a fallback in case data-image is null
+					},
+				);
+			});
+		}
+	</script>
 </BaseLayout>
