@@ -7,11 +7,11 @@ import Ellipse from "../components/Ellipse.astro";
 
 <BaseLayout>
     <!-- Image Section -->
-    <div class="relative w-full">
+    <div class="relative min-w-full overflow-hidden shrink-0">
         <!-- Overlay -->
         <div class="absolute inset-0 bg-[#00000073]"></div>
         <!-- Image -->
-        <img src="/img/aboutUsPhoto.jpeg" alt="" class="w-full h-[545px]" />
+        <img src="/img/aboutUsPhoto.jpeg" alt="" class="w-full h-[545px] shrink-0" />
 
         <div
             class="container absolute flex justify-center items-center flex-col text-white top-[369px] ms-12"
@@ -21,62 +21,72 @@ import Ellipse from "../components/Ellipse.astro";
         </div>
     </div>
 
-    <Ellipse top="117%" left="20%" width="450px" height="360px" opacity="0.2" />
+    <!-- Body Section -->
+    <div class="p-8 mt-10">
+        <div class="container mx-auto max-w-6xl">
+            <!-- Welcome Section -->
+            <section class="text-center mb-24 relative">
+                <Ellipse
+                    top="40%"
+                    left="10%"
+                    width="450px"
+                    height="360px"
+                    opacity="0.13"
+                />
+                <h1
+                    class="text-4xl font-bold mb-4 text-left border-l-4 pl-4 border-[#6699FF]"
+                >
+                    Welcome To Pulse For Medical Equipment (PME)
+                </h1>
+                <p class="text-lg text-left">
+                    At Pulse for Medical Equipment (PME), we take pride in being
+                    an Iraqi Based Company that has been successfully engaging
+                    in supplying state-of-the-art medical and lab equipment
+                    since 1998. Our unwavering commitment lies in providing a
+                    world-class, customer-oriented, and reliable service across
+                    all sectors. With an extensive range of medical supplies and
+                    cutting-edge equipment, we are dedicated to meeting every
+                    medical need with unmatched efficiency.
+                </p>
+            </section>
 
-    <!--Body Section-->
-    <div class="container flex flex-col mt-20 ps-10">
-        <div class="flex flex-col ps-52">
-            <h2
-                class="font-bold text-[34px] tracking-tighter mb-4 border-l-[7px] ps-5 rounded-sm border-[#6699FF]"
-            >
-                Welcome To Pulse for Medical Equipment (PME)
-            </h2>
-            <p class="text-[19px] font-normal tracking-tighter md:w-[80%]">
-                At Pulse for Medical Equipment (PME), we take pride in being an
-                Iraqi based company that has been successfully engaging in
-                supplying state-of-the-art medical and lab equipment since 1998.
-                Our unwavering commitment lies in providing a world-class,
-                customer-oriented, and reliable service across all sectors. With
-                an extensive range of medical supplies and cutting-edge
-                equipment, we are dedicated to meeting every medical need with
-                unmatched efficiency.
-            </p>
+            <!-- Mission Section -->
+            <section class="text-center mb-24">
+                <h2
+                    class="text-3xl font-bold mb-4 text-left border-l-4 pl-4 border-[#6699FF]"
+                >
+                    Our Mission
+                </h2>
+                <p class="text-lg text-left">
+                    Our mission is to revolutionize the medical sector in Iraq
+                    by delivering highly skilled and advanced solutions. We
+                    strive to elevate healthcare standards, one breakthrough at
+                    a time. Backed by our access to thousands of products from
+                    top-rated vendors, we consistently provide our customers
+                    with high-quality and competitive solutions, tailored to
+                    their unique requirements.
+                </p>
+            </section>
+
+            <!-- Why Us Section -->
+            <section class="text-center">
+                <h2
+                    class="text-3xl font-bold mb-8 text-left border-l-4 pl-4 border-[#6699FF]"
+                >
+                    Why Us?
+                </h2>
+                <div
+                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+                >
+                    <!-- cards -->
+                     <WhyUsCard/>
+                     <WhyUsCard/>
+                     <WhyUsCard/>
+                     <WhyUsCard/>
+                     <WhyUsCard/>
+                     <WhyUsCard/>
+                </div>
+            </section>
         </div>
-
-        <div class="flex flex-col ps-52 mt-24">
-            <h2
-                class="font-bold text-[34px] tracking-tighter mb-4 border-l-[7px] ps-5 rounded-sm border-[#6699FF]"
-            >
-                our mission
-            </h2>
-            <p class="text-[19px] font-normal tracking-tighter md:w-[80%]">
-                Our mission is to revolutionize the medical sector in Iraq by
-                delivering highly skilled and advanced solutions. We strive to
-                elevate healthcare standards, one breakthrough at a time. Backed
-                by our access to thousands of products from top-rated vendors,
-                we consistently provide our customers with high-quality and
-                competitive solutions, tailored to their unique requirements.
-            </p>
-        </div>
-
-        <div class="flex flex-col ps-52 mt-24">
-            <h2
-                class="font-bold text-[34px] tracking-tighter mb-4 border-l-[7px] ps-5 rounded-sm border-[#6699FF] "
-            >
-                Why Us?
-            </h2>
-        </div>
-
-        <div
-            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-10 me-11"
-        >
-          <WhyUsCard/> 
-          <WhyUsCard/> 
-          <WhyUsCard/> 
-          <WhyUsCard/> 
-          <WhyUsCard/> 
-          <WhyUsCard/> 
     </div>
-
-    <Ellipse top="225%" left="86%" width="450px" height="480px" opacity="0.2" />
 </BaseLayout>
