@@ -8,11 +8,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <div
         class="container mt-20 flex justify-center items-center flex-col mx-auto"
     >
-        <h1 class="font-bold text-[34px] leading-[42.5px] tracking-tighter">
+        <h1 class="font-bold text-3xl md:text-[34px] leading-[42.5px] tracking-tighter">
             Our premium services
         </h1>
         <h3
-            class="font-bold text-[24px] leading-[30px] tracking-tighter text-[#7C7B7B] mt-4"
+            class="font-bold md:text-[24px] leading-[30px] tracking-tighter text-[#7C7B7B] mt-4 md:ms-0 ms-2 "
         >
             Experience Unmatched Excellence and Exclusive Solutions
         </h3>
@@ -20,15 +20,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     <!--Body Part -->
     <div
-        class="container flex lg:flex-row justify-evenly items-center columns-2 mt-20 bg-[#E4EEF4] py-24 mx-auto min-w-full"
+        class="container flex flex-col md:flex-row justify-evenly items-center columns-2 mt-20 bg-[#E4EEF4] py-24 mx-auto min-w-full"
     >
-        <div class="container flex flex-col w-[30%]">
+        <div class="container flex flex-col md:w-[30%] w-[90%] max-sm:mb-8">
             <h2
-                class="text-[30px] font-bold leading[42.5px] tracking-tighter mb-8"
+                class="text-[30px] font-bold leading[42.5px] tracking-tighter mb-8 max-sm:mx-auto"
             >
                 Design
             </h2>
-            <p class="font-normal leading-[22.5px] text-[17px]">
+            <p class="font-normal leading-[22.5px] md:text-[17px]">
                 Our highly trained team has a strong desire to do the “right
                 thing” and to deliver the promises that we make. We maintain
                 very high levels of training, knowledge & technical expertise to
@@ -44,27 +44,28 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </div>
 
         <div
-            class="container flex w-[30%] bg-[#D9D9D9] justify-center items-center h-[400px]"
+            class="container flex md:w-[30%] max-sm:w-[90%] max-sm:mx-auto bg-[#D9D9D9] justify-center items-center h-[400px]"
         >
             <p class="font-bold text-[34px]">Image</p>
         </div>
     </div>
 
+    <!--Second Part -->
     <div
-        class="container flex lg:flex-row justify-evenly items-center columns-2 py-24 mx-auto min-w-full"
+        class="container flex flex-col-reverse md:flex-row justify-evenly items-center columns-2 mt-20 bg-[#E4EEF4] py-24 mx-auto min-w-full"
     >
         <div
-            class="container flex w-[30%] bg-[#D9D9D9] justify-center items-center h-[400px]"
+            class="container flex md:w-[30%] max-sm:w-[90%] max-sm:mx-auto bg-[#D9D9D9] justify-center items-center h-[400px]"
         >
             <p class="font-bold text-[34px]">Image</p>
         </div>
-        <div class="container flex flex-col w-[30%]">
+        <div class="container flex flex-col md:w-[30%] w-[90%] max-sm:mb-8">
             <h2
-                class="text-[30px] font-bold leading[42.5px] tracking-tighter mb-8"
+                class="text-[30px] font-bold leading[42.5px] tracking-tighter mb-8 max-sm:mx-auto"
             >
                 Design
             </h2>
-            <p class="font-normal leading-[22.5px] text-[17px]">
+            <p class="font-normal leading-[22.5px] md:text-[17px]">
                 Our highly trained team has a strong desire to do the “right
                 thing” and to deliver the promises that we make. We maintain
                 very high levels of training, knowledge & technical expertise to
@@ -80,6 +81,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </div>
     </div>
 
+    <!--Third Part -->
     <div
         class="container flex lg:flex-row justify-evenly items-center columns-2 bg-[#E4EEF4] py-24 mx-auto min-w-full"
     >
@@ -105,12 +107,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </div>
 
         <div
-            class="container flex w-[30%] bg-[#D9D9D9] justify-center items-center h-[400px]"
+            class="container flex md: w-[30%] bg-[#D9D9D9] justify-center items-center h-[400px]"
         >
             <p class="font-bold text-[34px]">Image</p>
         </div>
     </div>
 
+    <!--Fourth Part -->
     <div
         class="container flex lg:flex-row justify-evenly items-center columns-2 py-24 mx-auto min-w-full"
     >
