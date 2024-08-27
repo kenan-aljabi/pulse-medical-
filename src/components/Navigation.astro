@@ -3,13 +3,13 @@ const currentPath = Astro.url.pathname;
 ---
 
 <nav class="py-3 z-50 flex justify-around min-w-full mx-auto">
-    <div class="container flex items-center justify-center mx-auto">
+    <div class="container flex items-center md:justify-center justify-between mx-auto max-sm:px-3">
         <!-- Logo -->
         <div class="flex-shrink-0">
             <img
                 src="/logo.png"
                 alt="Site Logo"
-                class="h-10 w-24 xl:h-14 xl:w-32 lg:h-14 lg:w-28"
+                class="h-[54px] w-[106px] md:h-10 md:w-24 xl:h-14 xl:w-32 lg:h-14 lg:w-28"
             />
         </div>
 
@@ -60,7 +60,7 @@ const currentPath = Astro.url.pathname;
             class="md:hidden flex items-center text-black relative z-50"
         >
             <svg
-                class="w-6 h-6"
+                class="w-10 h-10"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -104,46 +104,47 @@ const currentPath = Astro.url.pathname;
     </div>
 
     <!-- Dropdown Menu (Mobile) -->
-    <div
-        id="dropdown-menu"
-        class="fixed inset-0 p-4 mt-16 bg-white shadow-lg hidden flex-col items-center justify-center space-y-4 z-40"
-    >
-        <a
-            href="/"
-            class={`block py-2 px-4 text-base ${currentPath === "/" ? "text-black font-bold" : "text-custom-black"}`}
-            >Home</a
-        >
-        <a
-            href="/about"
-            class={`block py-2 px-4 text-base ${currentPath === "/about" ? "text-black font-bold" : "text-custom-black"}`}
-            >About Us</a
-        >
-        <a
-            href="/products"
-            class={`block py-2 px-4 text-base ${currentPath === "/products" ? "text-black font-bold" : "text-custom-black"}`}
-            >Products</a
-        >
-        <a
-            href="/services"
-            class={`block py-2 px-4 text-base ${currentPath === "/services" ? "text-black font-bold" : "text-custom-black"}`}
-            >Services</a
-        >
-        <a
-            href="/hamilton"
-            class={`block py-2 px-4 text-base ${currentPath === "/hamilton" ? "text-black font-bold" : "text-custom-black"}`}
-            >Hamilton</a
-        >
-        <a
-            href="/clients"
-            class={`block py-2 px-4 text-base ${currentPath === "/clients" ? "text-black font-bold" : "text-custom-black"}`}
-            >Clients</a
-        >
-        <a
-            href="/contact"
-            class={`block py-2 px-4 text-base ${currentPath === "/contact" ? "text-black font-bold" : "text-custom-black"}`}
-            >Contact Us</a
-        >
-    </div>
+<div
+id="dropdown-menu"
+class="fixed inset-0 py-4 mt-16 bg-slate-100 text-[20px] hidden flex-col justify-center items-center space-y-4 z-40"
+>
+<a
+    href="/"
+    class={`block py-2 px-4 justify-self-center  ${currentPath === "/" ? "text-black font-bold" : "text-custom-black"}`}
+    >Home</a
+>
+<a
+    href="/about"
+    class={`block py-2 px-4  ${currentPath === "/about" ? "text-black font-bold" : "text-custom-black"}`}
+    >About Us</a
+>
+<a
+    href="/products"
+    class={`block py-2 px-4  ${currentPath === "/products" ? "text-black font-bold" : "text-custom-black"}`}
+    >Products</a
+>
+<a
+    href="/services"
+    class={`block py-2 px-4  ${currentPath === "/services" ? "text-black font-bold" : "text-custom-black"}`}
+    >Services</a
+>
+<a
+    href="/hamilton"
+    class={`block py-2 px-4  ${currentPath === "/hamilton" ? "text-black font-bold" : "text-custom-black"}`}
+    >Hamilton</a
+>
+<a
+    href="/clients"
+    class={`block py-2 px-4  ${currentPath === "/clients" ? "text-black font-bold" : "text-custom-black"}`}
+    >Clients</a
+>
+<a
+    href="/contact"
+    class={`block py-2 px-4  ${currentPath === "/contact" ? "text-black font-bold" : "text-custom-black"}`}
+    >Contact Us</a
+>
+</div>
+
 
     <!-- Language Switch (Mobile) -->
    
