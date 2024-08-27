@@ -3,7 +3,7 @@ const currentPath = Astro.url.pathname;
 ---
 
 <nav class="py-3 z-50 flex justify-around min-w-full mx-auto">
-    <div class="container flex items-center md:justify-center justify-between mx-auto max-sm:px-3">
+    <div class="container flex items-center lg:justify-center justify-between mx-auto max-sm:px-3">
         <!-- Logo -->
         <div class="flex-shrink-0">
             <img
@@ -15,7 +15,7 @@ const currentPath = Astro.url.pathname;
 
         <!-- Navigation Links (Desktop) -->
         <div
-            class="hidden lg:mx-12 xl:mx-20 md:flex lg:space-x-7 space-x-4 xl:space-x-8 text-xs md:text-sm xl:text-[18px] lg:text-[13px] font-lexend uppercase leading-[18px] font-normal"
+            class="hidden md:hidden lg:mx-12 xl:mx-20 lg:flex lg:space-x-7 space-x-4 xl:space-x-8 text-xs md:text-sm xl:text-[18px] lg:text-[13px] font-lexend uppercase leading-[18px] font-normal"
         >
             <a
                 href="/"
@@ -57,7 +57,7 @@ const currentPath = Astro.url.pathname;
         <!-- Toggle Button for Mobile -->
         <button
             id="menu-button"
-            class="md:hidden flex items-center text-black relative z-50"
+            class="lg:hidden flex items-center text-black relative z-50"
         >
             <svg
                 class="w-10 h-10"
@@ -75,7 +75,7 @@ const currentPath = Astro.url.pathname;
         </button>
 
         <!-- Language Switch (Desktop) -->
-        <div class="hidden md:flex items-center space-x-1">
+        <div class="hidden lg:flex items-center space-x-1">
             <span class="text-black font-bold text-xs md:text-sm lg:text-base"
                 >ENGLISH</span
             >
