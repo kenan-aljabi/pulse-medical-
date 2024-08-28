@@ -6,13 +6,14 @@ import ProjectCards from "../components/ProjectCards.astro";
 
 <BaseLayout>
     <div
-        class="container mt-20 flex justify-center items-center flex-col mx-auto"
+        class="container mt-20 flex justify-center items-center flex-col mx-auto max-sm:text-center"
     >
-        <h1 class="font-bold text-[34px] leading-[42.5px] tracking-tighter">
+        <h1 class="font-bold md:text-[34px] text-[30px] leading-[42.5px] tracking-tighter">
             Our Professional Projects
         </h1>
         <h3
-            class="font-bold text-[24px] leading-[30px] tracking-tighter text-[#7C7B7B] mt-4"
+            class="font-bold md:text-[24px] text-[22
+            3px] leading-[30px] tracking-tighter text-[#7C7B7B] mt-4"
         >
             Experience Unmatched Excellence and Exclusive Solutions
         </h3>
@@ -21,7 +22,7 @@ import ProjectCards from "../components/ProjectCards.astro";
     <!-- Cards Section -->
     <div class="container min-w-full bg-[#E4EEF4] mt-16">
         <div
-            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mx-[170px] py-10"
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 py-10 max-sm:text-center 2xl:px-20"
         >
             <ProjectCards />
             <ProjectCards />
