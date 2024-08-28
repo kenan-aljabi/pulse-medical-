@@ -6,7 +6,7 @@ import HamiltonCards from "../components/HamiltonCards.astro";
 
 <BaseLayout>
     <div
-        class="container mt-20 flex justify-center items-center flex-col mx-auto"
+        class="container mt-20 flex justify-center items-center flex-col mx-auto max-sm:text-center min-w-full"
     >
         <h1 class="font-bold text-[34px] leading-[42.5px] tracking-tighter">
             Hamilton Medical
@@ -19,15 +19,15 @@ import HamiltonCards from "../components/HamiltonCards.astro";
     </div>
 
     <div
-        class="container flex flex-col mx-auto min-w-full ps-32 mt-20 bg-[#E4EEF4] py-10"
+        class="container flex flex-col min-w-full md:ps-32 mt-20 bg-[#E4EEF4] py-10"
     >
         <h2
-            class="font-bold text-[34px] tracking-tighter mb-4 border-l-[7px] ps-5 rounded-sm border-[#6699FF]"
+            class="font-bold text-[34px] tracking-tighter mb-4 border-l-[7px] ps-5 rounded-sm border-[#6699FF] flex max-sm:mx-auto"
         >
             Description
         </h2>
 
-        <p class="font-normal leading-[22.5px] tracking-tighter pe-20">
+        <p class="font-normal leading-[22.5px] tracking-tighter md:pe-20 flex max-sm:mx-auto max-sm:text-center max-sm:text-[20px] max-sm:px-5 max-sm:leading-[32px]">
             HAMILTON MEDICAL was founded from a passion with the goal of
             improving the lives of patients on respirators and the people who
             care for them. Since 1983, our commitment to innovation has resulted
@@ -40,16 +40,16 @@ import HamiltonCards from "../components/HamiltonCards.astro";
     </div>
 
     <div
-        class="container flex flex-col mx-auto min-w-full ps-32 mt-20 bg-[#E4EEF4] py-10"
+        class="container flex flex-col mx-auto min-w-full md:ps-32 mt-20 bg-[#E4EEF4] py-10"
     >
         <h2
-            class="font-bold text-[34px] tracking-tighter border-l-[7px] ps-5 rounded-sm border-[#6699FF]"
+            class="font-bold md:text-[34px] text-[32px] tracking-tighter border-l-[7px] ps-5 rounded-sm border-[#6699FF] max-sm:mx-auto"
         >
             Products
         </h2>
 
         <div
-            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-2 me-24"
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-2 md:me-24 max-sm:mx-auto"
         >
             <HamiltonCards />
             <HamiltonCards />
