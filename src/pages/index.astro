@@ -12,7 +12,7 @@ import Card from "../components/Card.astro";
 		class="container flex flex-col md:flex-row items-center justify-center font-normal relative mt-10 xl:ps-32 mx-auto"
 	>
 		<!-- Text Section -->
-		<div class="w-full md:w-1/2">
+		<div class="max-md:text-center md:w-1/2">
 			<h2
 				class="font-bold md:text-3xl lg:text-4xl uppercase leading-[50px] text-2xl w-[350px] md:w-[500px]"
 			>
@@ -30,20 +30,22 @@ import Card from "../components/Card.astro";
 			</div>
 
 			<!--Button Component -->
+			<div class="flex mx-auto max-md:ms-3">
 			<Button />
+		</div>
 		</div>
 
 		<!-- Photo Section -->
-		<div class="md:w-1/2 mt-1 md:mt-0 relative">
+		<div class="md:w-1/2 mt-14 md:mt-0 relative max-md:ms-3">
 			<!-- Ellipse Behind the Photo -->
 			<Ellipse />
 
 			<!-- Photo -->
-			<div class="flex justify-center relative">
+			<div class="flex lg:justify-center relative">
 				<img
 					src="/img/doctor.png"
 					alt="Doctor"
-					class="w-48 md:w-72 lg:w-80 xl:w-96 h-auto object-cover rounded-md"
+					class="w-40 md:w-72 lg:w-80 xl:w-96 h-auto object-cover rounded-md"
 				/>
 			</div>
 		</div>
@@ -58,7 +60,7 @@ import Card from "../components/Card.astro";
 
 	<!--Logo Part -->
 	<div
-		class="container columns-2 md:columns-4 lg:columns-7 flex-col flex md:flex-row justify-center items-center gap-x-8 md:gap-x-12 xl:gap-x-[103px] mt-12 md:mt-20 text-xl md:text-3xl font-bold mb-20 lg:mb-44 mx-auto"
+		class="container columns-2 md:columns-4 lg:columns-7 flex-col flex md:flex-row justify-center items-center gap-x-8 md:gap-x-12 xl:gap-x-[103px] mt-12 md:mt-20 text-xl md:text-3xl font-bold mb-20 lg:mb-44 mx-auto max-md:gap-y-5"
 	>
 		<p>Logo1</p>
 		<p>Logo2</p>
@@ -82,7 +84,7 @@ import Card from "../components/Card.astro";
 		/>
 		<!-- Service Description Section -->
 		<div class="md:w-1/2">
-			<h2 class="font-bold text-2xl md:text-[34px] tracking-tighter">
+			<h2 class="font-bold text-2xl md:text-[34px] tracking-tighter max-md:flex max-md:justify-center">
 				Our Premium Services
 			</h2>
 
@@ -177,7 +179,7 @@ import Card from "../components/Card.astro";
 
 	<!--Our Featured Products Section -->
 	<div
-		class="container mt-36 flex flex-col md:flex-row justify-center mb-10 xl:gap-x-[450px] max-lg:flex-col relative mx-auto"
+		class="container mt-36 flex flex-col md:flex-row  max-lg:flex-col relative "
 	>
 		<Ellipse
 			top="%"
@@ -186,7 +188,7 @@ import Card from "../components/Card.astro";
 			height="280px"
 			opacity="0.2"
 		/>
-		<div>
+		<div class="max-md:text-center">
 			<h2 class="text-3xl md:text-[34px] font-bold tracking-tighter">
 				Our Featured Products
 			</h2>
@@ -197,7 +199,7 @@ import Card from "../components/Card.astro";
 			</p>
 		</div>
 
-		<div class="flex mt-6 md:mt-0">
+		<div class="flex mt-6 md:mt-0 max-md:justify-end max-md:pe-3 max-md:mb-6">
 			<button
 				class="rounded-xl text-[20px] border-[3px] border-[#6699FF] text-[#6699FF] self-center justify-self-center px-4 py-2 hover:bg-blue-100 transition-colors"
 				>View More</button
