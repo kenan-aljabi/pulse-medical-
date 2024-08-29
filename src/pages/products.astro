@@ -19,14 +19,12 @@ import Ellipse from "../components/Ellipse.astro";
     <nav class="mt-12">
         <div class="container mx-auto flex justify-around items-center">
             <div
-                class="flex space-x-16 font-bold text-[#9A9AB0] font-dm-sans items-center text-[20px] tracking-tighter"
+                class="hidden lg:flex space-x-16 font-bold text-[#9A9AB0] font-dm-sans items-center text-[20px] tracking-tighter"
             >
                 <!-- Navbar Links -->
                 <a
                     href="#"
-                    data-description="AirSep is world renowned as the premier manufacturer of PSA oxygen generating systems for medical and industrial applications. The company’s two divisions meet a wide variety of respiratory and commercial needs in more than 100 countries.
-The industrial oxygen generating systems (with output from liters per minute to tons per day) serve commercial applications that range from ozone generation and bioremediation, to thermal oxidation and aquaculture, to a medical facility’s central oxygen supply.
-Our medical oxygen concentrates and other unique and portable respiratory products, such as oxygen conserving devices and oximetry systems, are used for therapeutic applications in home, hospital, and clinical settings around the globe."
+                    data-description="AirSep is world renowned as the premier manufacturer of PSA oxygen generating systems for medical and industrial applications. The company’s two divisions meet a wide variety of respiratory and commercial needs in more than 100 countries."
                     class="hover:text-[#48A5D0] active:text-[#48A5D0]"
                 >
                     AirSep
@@ -73,14 +71,64 @@ Our medical oxygen concentrates and other unique and portable respiratory produc
                 >
                     Ultra-Dent
                 </a>
-                <div>
-                    <button class="flex items-center">
-                        <img
-                            src="/img/SearchIcon.png"
-                            alt="Search"
-                            class="w-[20px] h-[20px]"
-                        />
-                    </button>
+            </div>
+            <!-- Dropdown Menu for small screens -->
+            <div class="lg:hidden w-full">
+                <button id="dropdownButton" class="flex justify-between items-center w-full px-4 py-2 border rounded-md text-[#9A9AB0] font-bold text-[20px]">
+                    Menu
+                    <img src="/img/MenuIcon.png" alt="Menu" class="w-[20px] h-[20px]" />
+                </button>
+                <div id="dropdownMenu" class="hidden flex-col space-y-4 mt-4 px-4">
+                    <!-- Dropdown Links -->
+                    <a
+                        href="#"
+                        data-description="AirSep is world renowned as the premier manufacturer of PSA oxygen generating systems for medical and industrial applications. The company’s two divisions meet a wide variety of respiratory and commercial needs in more than 100 countries."
+                        class="block hover:text-[#48A5D0] active:text-[#48A5D0]"
+                    >
+                        AirSep
+                    </a>
+                    <a
+                        href="#"
+                        data-description="Channal MED specializes in medical devices and services that improve patient care..."
+                        class="block hover:text-[#48A5D0] active:text-[#48A5D0]"
+                    >
+                        Channal MED
+                    </a>
+                    <a
+                        href="#"
+                        data-description="Diasys offers comprehensive diagnostic solutions that enhance the quality of laboratory testing..."
+                        class="block hover:text-[#48A5D0] active:text-[#48A5D0]"
+                    >
+                        Diasys
+                    </a>
+                    <a
+                        href="#"
+                        data-description="Manfils Biomedica is a leader in biomedical research and development, providing cutting-edge solutions..."
+                        class="block hover:text-[#48A5D0] active:text-[#48A5D0]"
+                    >
+                        Manfils Biomedica
+                    </a>
+                    <a
+                        href="#"
+                        data-description="Norav specializes in advanced cardiovascular diagnostic systems that are used globally..."
+                        class="block hover:text-[#48A5D0] active:text-[#48A5D0]"
+                    >
+                        Norav
+                    </a>
+                    <a
+                        href="#"
+                        data-description="CSN-Industries produces high-quality industrial equipment and machinery for various sectors..."
+                        class="block hover:text-[#48A5D0] active:text-[#48A5D0]"
+                    >
+                        CSN-Industries
+                    </a>
+                    <a
+                        href="#"
+                        data-description="Ultra-Dent offers a wide range of dental products that are trusted by professionals worldwide..."
+                        class="block hover:text-[#48A5D0] active:text-[#48A5D0]"
+                    >
+                        Ultra-Dent
+                    </a>
                 </div>
             </div>
         </div>
@@ -88,7 +136,7 @@ Our medical oxygen concentrates and other unique and portable respiratory produc
 
     <div
         id="category-container"
-        class="w-full max-w-[78%] mx-auto mt-10 mb-10 border border-black rounded-md"
+        class="w-full 2xl:max-w-[78%] xl:max-w-[88.5%] mx-auto mt-10 mb-10 border border-black rounded-md"
     >
         <div
             id="category-rectangle"
@@ -115,7 +163,7 @@ Our medical oxygen concentrates and other unique and portable respiratory produc
 
     <!--Cards -->
     <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-4 mx-[160px]"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:mx-[154px] xl:mx-[70px] gap-y-5"
     >
         <Card
             imageUrl="https://via.placeholder.com/420x316"
@@ -156,13 +204,17 @@ Our medical oxygen concentrates and other unique and portable respiratory produc
         const descriptionText = document.getElementById("description-text");
         const arrow = document.getElementById("arrow");
         const navLinks = document.querySelectorAll("nav a[data-description]");
+        const dropdownButton = document.getElementById("dropdownButton");
+        const dropdownMenu = document.getElementById("dropdownMenu");
 
         if (
             rectangle &&
             descriptionBox &&
             descriptionText &&
             arrow &&
-            navLinks
+            navLinks &&
+            dropdownButton &&
+            dropdownMenu
         ) {
             navLinks.forEach((link) => {
                 link.addEventListener("click", (event) => {
@@ -174,28 +226,38 @@ Our medical oxygen concentrates and other unique and portable respiratory produc
                         link.classList.add("text-[#9A9AB0]"); // Reset to original color
                     });
 
-                    // Add active class (text-[#48A5D0]) to the clicked link
+                    // Add active class (text-[#48A5D0]) to clicked link
+                    link.classList.remove("text-[#9A9AB0]");
                     link.classList.add("text-[#48A5D0]");
-                    link.classList.remove("text-[#9A9AB0]"); // Remove original color
 
-                    // Update description content
                     const description = link.getAttribute("data-description");
                     if (description) {
-                        descriptionText.textContent = description;
-                        descriptionBox.classList.add("hidden");
-                        arrow.classList.remove("rotate-90"); // Ensure arrow is reset to right direction
+                        descriptionText.innerText = description;
                     }
+
+                    descriptionBox.classList.remove("hidden");
+                    arrow.classList.add("rotate-90");
+                    arrow.classList.add("rotate-90");
+                    arrow.innerHTML = "↓";
                 });
             });
 
+            // Category rectangle click event
             rectangle.addEventListener("click", () => {
-                if (descriptionBox.classList.contains("hidden")) {
-                    descriptionBox.classList.remove("hidden");
-                    arrow.classList.add("rotate-90"); // Rotate the arrow to point down
+                descriptionBox.classList.toggle("hidden");
+                arrow.classList.toggle("rotate-90");
+                arrow.classList.toggle("rotate-90");
+
+                if (arrow.classList.contains("rotate-90")) {
+                    arrow.innerHTML = "↓";
                 } else {
-                    descriptionBox.classList.add("hidden");
-                    arrow.classList.remove("rotate-90"); // Rotate the arrow back to point right
+                    arrow.innerHTML = "➔";
                 }
+            });
+
+            // Dropdown menu button click event
+            dropdownButton.addEventListener("click", () => {
+                dropdownMenu.classList.toggle("hidden");
             });
         }
     </script>
