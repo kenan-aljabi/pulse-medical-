@@ -8,7 +8,7 @@ import Ellipse from "../components/Ellipse.astro";
 <BaseLayout>
     <Ellipse top="55%" left="88%" width="350px" height="400px" opacity="0.25" />
 
-    <div class="container mt-24 px-36 flex justify-center items-center">
+    <div class="container mt-24 lg:px-36 flex justify-center items-center max-lg:max-w-[95%] max-lg:mx-auto">
         <!-- Header Part-->
         <h2 class="text-[34px] font-bold tracking-tighter leading-10">
             Our Featured Products
@@ -77,7 +77,7 @@ import Ellipse from "../components/Ellipse.astro";
                 </button>
             </div>
             <!-- Dropdown Menu for small screens -->
-            <div class="lg:hidden w-full">
+            <div class="lg:hidden w-[95%]">
                 <button id="dropdownButton" class="flex justify-between items-center w-full px-4 py-2 border rounded-md text-[#9A9AB0] font-bold text-[20px]">
                     Menu
                     <img src="/img/MenuIcon.png" alt="Menu" class="w-[20px] h-[20px]" />
@@ -141,7 +141,7 @@ import Ellipse from "../components/Ellipse.astro";
 
     <div
         id="category-container"
-        class="w-full 2xl:max-w-[78%] xl:max-w-[88.5%] mx-auto mt-10 mb-10 border border-black rounded-md"
+        class="w-[95%] 2xl:max-w-[78%] xl:max-w-[88.5%] mx-auto mt-10 mb-10 border border-black rounded-md"
     >
         <div
             id="category-rectangle"
@@ -168,7 +168,7 @@ import Ellipse from "../components/Ellipse.astro";
 
     <!--Cards -->
     <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:mx-[154px] xl:mx-[70px] gap-y-5"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:mx-[154px] xl:mx-[70px] gap-y-5 max-lg:max-w-[95%] max-lg:mx-auto"
     >
         <Card
             imageUrl="https://via.placeholder.com/420x316"
