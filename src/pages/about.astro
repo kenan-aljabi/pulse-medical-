@@ -7,17 +7,17 @@ import Ellipse from "../components/Ellipse.astro";
 
 <BaseLayout>
     <!-- Image Section -->
-    <div class="relative min-w-full overflow-hidden shrink-0">
+    <div class="relative overflow-hidden shrink-0">
         <!-- Overlay -->
         <div class="absolute inset-0 bg-[#00000073]"></div>
         <!-- Image -->
-        <img src="/img/aboutUsPhoto.jpeg" alt="" class="w-full h-[545px] shrink-0" />
+        <img src="/img/aboutUsPhoto.jpeg" alt="" class="w-full max-lg:h-auto h-[580px] shrink-0" />
 
         <div
-            class="container absolute flex justify-center items-center flex-col text-white top-[369px] ms-12"
+            class="container absolute flex justify-center items-center flex-col text-white lg:top-[369px] top-[50%]"
         >
-            <h2 class="text-[56px] font-bold">About Us</h2>
-            <h3 class="text-[24px]">Get To Know Our Team And Values</h3>
+            <h2 class="lg:text-[56px] text-[33px] font-bold">About Us</h2>
+            <h3 class="lg:text-[24px] text-[18px]">Get To Know Our Team And Values</h3>
         </div>
     </div>
 
@@ -34,11 +34,11 @@ import Ellipse from "../components/Ellipse.astro";
                     opacity="0.13"
                 />
                 <h1
-                    class="text-4xl font-bold mb-4 text-left border-l-4 pl-4 border-[#6699FF]"
+                    class="lg:text-4xl text-[24px] font-bold mb-4 lg:text-left border-l-4 pl-4 border-[#6699FF]"
                 >
                     Welcome To Pulse For Medical Equipment (PME)
                 </h1>
-                <p class="text-lg text-left">
+                <p class="text-lg lg:text-left">
                     At Pulse for Medical Equipment (PME), we take pride in being
                     an Iraqi Based Company that has been successfully engaging
                     in supplying state-of-the-art medical and lab equipment
@@ -53,11 +53,11 @@ import Ellipse from "../components/Ellipse.astro";
             <!-- Mission Section -->
             <section class="text-center mb-24">
                 <h2
-                    class="text-3xl font-bold mb-4 text-left border-l-4 pl-4 border-[#6699FF]"
+                    class="lg:text-3xl text-[30px] font-bold mb-4 lg:text-left border-l-4 pl-4 border-[#6699FF]"
                 >
                     Our Mission
                 </h2>
-                <p class="text-lg text-left">
+                <p class="text-lg lg:text-left">
                     Our mission is to revolutionize the medical sector in Iraq
                     by delivering highly skilled and advanced solutions. We
                     strive to elevate healthcare standards, one breakthrough at
@@ -71,7 +71,7 @@ import Ellipse from "../components/Ellipse.astro";
             <!-- Why Us Section -->
             <section class="text-center">
                 <h2
-                    class="text-3xl font-bold mb-8 text-left border-l-4 pl-4 border-[#6699FF]"
+                    class="lg:text-3xl text-[30px] font-bold mb-8 lg:text-left border-l-4 pl-4 border-[#6699FF]"
                 >
                     Why Us?
                 </h2>
