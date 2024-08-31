@@ -11,10 +11,10 @@ const { imageUrl, category, title } = Astro.props;
 ---
 
 <div
-    class=" lg:max-w-sm max-w-[350px] mx-auto bg-white shadow-lg rounded-lg overflow-hidden relative"
+    class=" lg:max-w-sm w-[380px] h-[550px] mx-auto bg-white shadow-lg rounded-lg overflow-hidden relative border-[1px] border-black"
 >
     <!-- Card Image -->
-    <img class="w-[420px] h-[316px] object-cover" src={imageUrl} alt={title} />
+    <img class="w-[380px] h-[316px] object-fill border-b-[1px] border-black" src={imageUrl} alt={title} />
 
     <!-- Card Body -->
     <div class="p-4">
